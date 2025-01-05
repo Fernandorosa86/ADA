@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class brutalForce {
 //    Escreva um programa que implemente uma quebra de senha utilizando o método de força bruta. O programa deve:
 //
@@ -12,8 +14,23 @@ public class brutalForce {
 //    Para calcular o tempo gasto, subtraia o tempo final do tempo inicial.
 
     public static void main(String[] args) {
+
+        Scanner entrada = new Scanner (System.in);
+
         long inicio = System.currentTimeMillis ();
-        int senha = 1986;
+
+//        while (true){
+//            System.out.println("Informe uma senha com quatro digitos positivos: ");
+//            Long senha = entrada.nextLong ();
+//            if (senha == senha.longValue()  && senha > 0) {
+//                break;
+//            }
+//        }
+
+        System.out.println("Informe uma senha com quatro digitos positivos: ");
+        Long senha = entrada.nextLong ();
+
+
         int tentativas = 0;
 
         for (int i = 0; i < 10000; i++) {
@@ -25,9 +42,11 @@ public class brutalForce {
         }
         long fim = System.currentTimeMillis ();
         long tempoGasto = ( fim - inicio );
+
         System.out.println ( "Tentativas: " + tentativas );
-        System.out.println ( "Tempo gasto: " + tempoGasto );
+        System.out.println ( "Tempo gasto: " + tempoGasto + " Ms " );
+
+        entrada.close ();
     }
 
 }
-
