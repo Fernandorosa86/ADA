@@ -19,16 +19,15 @@ public class brutalForce {
 
         long inicio = System.currentTimeMillis ();
 
-//        while (true){
-//            System.out.println("Informe uma senha com quatro digitos positivos: ");
-//            Long senha = entrada.nextLong ();
-//            if (senha == senha.longValue()  && senha > 0) {
-//                break;
-//            }
-//        }
-
-        System.out.println("Informe uma senha com quatro digitos positivos: ");
-        Long senha = entrada.nextLong ();
+        // Validar a senha digitada pelo usuario, se tem 4 digitos e é positiva
+        int senha = 0;
+        while (true){
+            System.out.println("Informe uma senha com quatro digitos positivos: ");
+             senha = entrada.nextInt ();
+            if (senha >= 1000  && senha <= 9999) {
+                break;
+            }
+        }
 
 
         int tentativas = 0;
