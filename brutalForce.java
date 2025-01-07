@@ -37,18 +37,9 @@ public class brutalForce {
         int tentativas = 0;
 
         long inicio = System.currentTimeMillis ();
+
         String senhaLocalizada = "";
-//        for ( int i = 0; i < senha.length (); i++ ) {
-//            // Validar se a senha é igual a senha digitada pelo usuario
-//            for ( int j = 0; j < 10; j++ ) {
-//                if (j == senha.charAt(i)) {
-//                    senhaLocalizada = senhaLocalizada + j;
-//                    System.out.println ( "Senha Localizada: " + senhaLocalizada );
-//                    break;
-//                }
-//            }
-//
-//            }
+
         for (int i = 0; i < senha.length(); i++) {
             for (int j = 0; j < 10; j++) {
                 tentativas++;
